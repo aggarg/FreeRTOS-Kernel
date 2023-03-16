@@ -903,7 +903,7 @@ void vPortStoreTaskMPUSettings( xMPU_SETTINGS * xMPUSettings,
              * The following links provide detailed information:
              * https://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html
              * https://www.FreeRTOS.org/FAQHelp.html */
-            configASSERT( ucCurrentPriority >= ucMaxSysCallPriority );
+            configASSERT( ucCurrentPriority >= ulMaxSysCallPriority );
         }
 
         /* Priority grouping:  The interrupt controller (NVIC) allows the bits
