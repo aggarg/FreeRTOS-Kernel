@@ -5113,10 +5113,10 @@ TickType_t uxTaskResetEventItemValue( void )
                                         BaseType_t * pxHigherPriorityTaskWoken )
     {
         TCB_t * pxTCB;
-        uint8_t ucOriginalNotifyState;
+      uint8_t ucOriginalNotifyState;
         portBASE_TYPE xSavedInterruptStatus;
 
-        configASSERT( xTaskToNotify );
+      configASSERT( xTaskToNotify );
         configASSERT( uxIndexToNotify < configTASK_NOTIFICATION_ARRAY_ENTRIES );
 
         /* RTOS ports that support interrupt nesting have the concept of a
@@ -5137,11 +5137,11 @@ TickType_t uxTaskResetEventItemValue( void )
          * https://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html */
         portASSERT_IF_INTERRUPT_PRIORITY_INVALID();
 
-        pxTCB = xTaskToNotify;
+      pxTCB = xTaskToNotify;
 
         xSavedInterruptStatus = portSET_INTERRUPT_MASK_FROM_ISR();
         {
-            ucOriginalNotifyState = pxTCB->ucNotifyState[ uxIndexToNotify ];
+          ucOriginalNotifyState = pxTCB->ucNotifyState[ uxIndexToNotify ];
             pxTCB->ucNotifyState[ uxIndexToNotify ] = taskNOTIFICATION_RECEIVED;
 
             /* 'Giving' is equivalent to incrementing a count in a counting
