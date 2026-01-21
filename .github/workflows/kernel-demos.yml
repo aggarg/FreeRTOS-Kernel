@@ -9,6 +9,14 @@ env:
   bashEnd:    \033[0m
 
 jobs:
+  WIN32-Test:
+    name: WIN32 Test
+    runs-on: windows-latest
+    steps:
+      - name: Check amqtt install
+        run: pip install -r $GITHUB_ACTION_PATH/requirements.txt
+        shell: bash
+
   WIN32-MSVC:
     name: WIN32 MSVC
     runs-on: windows-latest
