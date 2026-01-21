@@ -13,10 +13,9 @@ jobs:
     name: WIN32 Test
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v4.1.1
       - name: Check amqtt install
-        uses: actions/checkout@v4.1.1
         run: pip install -r ./requirements.txt
-        shell: bash
 
   WIN32-MSVC:
     name: WIN32 MSVC
