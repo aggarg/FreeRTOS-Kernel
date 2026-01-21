@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.1
       - name: Check amqtt install
-        run: pip install -r ./requirements.txt
+        run: pip install -r .github/workflows/requirements.txt
 
   WIN32-MSVC:
     name: WIN32 MSVC
