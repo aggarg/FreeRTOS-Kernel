@@ -14,6 +14,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Check amqtt install
+        uses: actions/checkout@v4.1.1
         run: pip install -r ./requirements.txt
         shell: bash
 
