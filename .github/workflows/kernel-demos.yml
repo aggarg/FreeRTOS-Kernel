@@ -14,7 +14,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Check amqtt install
-        run: pip install -r $GITHUB_ACTION_PATH/requirements.txt
+        run: pip install -r .github/workflows/requirements.txt
         shell: bash
 
   WIN32-MSVC:
